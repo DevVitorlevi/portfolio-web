@@ -4,9 +4,10 @@ export interface Skill {
 }
 
 export interface SkillCategory {
-  category: "frontend" | "backend" | "databases" | "tools";
+  category: "frontend" | "backend" | "tools" | "methodologies";
   label: string;
   techs: Skill[];
+  methodologies?: string[];
 }
 
 export interface Project {

@@ -5,24 +5,12 @@ export const skills: SkillCategory[] = [
     category: "frontend",
     label: "Frontend",
     techs: [
+      { name: "HTML5", icon: "https://skills.syvixor.com/api/icons?i=html" },
+      { name: "CSS3", icon: "https://skills.syvixor.com/api/icons?i=css3" },
+      { name: "JavaScript", icon: "https://skills.syvixor.com/api/icons?i=js" },
+      { name: "TypeScript", icon: "https://skills.syvixor.com/api/icons?i=ts" },
       {
-        name: "HTML5",
-        icon: "https://skills.syvixor.com/api/icons?i=html",
-      },
-      {
-        name: "CSS3",
-        icon: "https://skills.syvixor.com/api/icons?i=css3",
-      },
-      {
-        name: "JavaScript",
-        icon: "https://skills.syvixor.com/api/icons?i=js",
-      },
-      {
-        name: "TypeScript",
-        icon: "https://skills.syvixor.com/api/icons?i=ts",
-      },
-      {
-        name: "React",
+        name: "React.js",
         icon: "https://skills.syvixor.com/api/icons?i=reactjs",
       },
       {
@@ -30,11 +18,15 @@ export const skills: SkillCategory[] = [
         icon: "https://skills.syvixor.com/api/icons?i=nextjs",
       },
       {
-        name: "Tailwind CSS",
-        icon: "https://skills.syvixor.com/api/icons?i=talwind",
+        name: "Tailwind",
+        icon: "https://skills.syvixor.com/api/icons?i=tailwind",
       },
       {
-        name: "Cypress",
+        name: "ShadCN/UI",
+        icon: "https://skills.syvixor.com/api/icons?i=shadcnui",
+      },
+      {
+        name: "Cypress.io",
         icon: "https://skills.syvixor.com/api/icons?i=cypress",
       },
     ],
@@ -52,47 +44,24 @@ export const skills: SkillCategory[] = [
         icon: "https://skills.syvixor.com/api/icons?i=fastify",
       },
       {
-        name: "Express",
+        name: "Express.js",
         icon: "https://skills.syvixor.com/api/icons?i=express",
       },
+      { name: "MySQL", icon: "https://skills.syvixor.com/api/icons?i=mysql" },
       {
-        name: "Prisma",
-        icon: "https://skills.syvixor.com/api/icons?i=prisma",
-      },
-      {
-        name: "JWT",
-        icon: "https://skills.syvixor.com/api/icons?i=jwt",
-      },
-      {
-        name: "Vitest",
-        icon: "https://skills.syvixor.com/api/icons?i=vitest",
-      },
-      {
-        name: "Docker",
-        icon: "https://skills.syvixor.com/api/icons?i=docker",
-      },
-    ],
-  },
-
-  {
-    category: "databases",
-    label: "Banco de Dados",
-    techs: [
-      {
-        name: "MySQL",
-        icon: "https://skills.syvixor.com/api/icons?i=mysql",
-      },
-      {
-        name: "PostegreSQL",
-        icon: "https://skills.syvixor.com/api/icons?i=postgres",
+        name: "PostgreSQL",
+        icon: "https://skills.syvixor.com/api/icons?i=postgresql",
       },
       {
         name: "MongoDB",
-        icon: "https://skills.syvixor.com/api/icons?i=mongoDB",
+        icon: "https://skills.syvixor.com/api/icons?i=mongodb",
       },
+      { name: "Prisma", icon: "https://skills.syvixor.com/api/icons?i=prisma" },
+      { name: "JWT", icon: "https://skills.syvixor.com/api/icons?i=jwt" },
+      { name: "Vitest", icon: "https://skills.syvixor.com/api/icons?i=vitest" },
+      { name: "Docker", icon: "https://skills.syvixor.com/api/icons?i=docker" },
     ],
   },
-
   {
     category: "tools",
     label: "Ferramentas",
@@ -114,10 +83,6 @@ export const skills: SkillCategory[] = [
         icon: "https://skills.syvixor.com/api/icons?i=git",
       },
       {
-        name: "Git Actions",
-        icon: "https://skills.syvixor.com/api/icons?i=vscode",
-      },
-      {
         name: "Postman",
         icon: "https://skills.syvixor.com/api/icons?i=postman",
       },
@@ -129,6 +94,19 @@ export const skills: SkillCategory[] = [
         name: "Trello",
         icon: "https://skills.syvixor.com/api/icons?i=trello",
       },
+    ],
+  },
+  {
+    category: "methodologies",
+    label: "Metodologias",
+    techs: [],
+    methodologies: [
+      "Clean Code",
+      "Clean Architecture",
+      "DDD",
+      "SOLID",
+      "TDD",
+      "MVC",
     ],
   },
 ];

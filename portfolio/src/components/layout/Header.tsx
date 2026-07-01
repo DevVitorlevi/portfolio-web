@@ -48,7 +48,7 @@ export function Header() {
         />
 
         <div
-          className="mx-auto h-26 flex items-center justify-between xl:justify-center xl:gap-60"
+          className="mx-auto h-26 flex items-center justify-between xl:justify-center xl:gap-20 2xl:gap-40"
           style={{ padding: "2rem" }}
         >
           <a
@@ -125,7 +125,7 @@ export function Header() {
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
             aria-expanded={isOpen}
           >
-            <Menu />
+            <Menu className="text-white" />
           </button>
         </div>
       </header>
@@ -139,7 +139,7 @@ export function Header() {
       )}
 
       <div
-        className="fixed top-0 right-0 h-full max-sm:w-[70%] md:w-80 z-50 lg:hidden flex flex-col border border-t-0 border-[#201e1e]"
+        className="fixed top-0 right-0 h-full max-sm:w-[70%] md:w-80 z-60 lg:hidden flex flex-col border border-t-0 border-[#201e1e]"
         style={{
           backgroundColor: "#080808",
           transform: isOpen ? "translateX(0)" : "translateX(100%)",

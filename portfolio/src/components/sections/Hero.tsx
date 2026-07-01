@@ -1,8 +1,27 @@
+import { useState, useEffect, useRef } from "react";
 import Ferrofluid from "@/components/ui/Ferrofluid";
 import Lanyard from "@/components/ui/Lanyard";
 import Me from "@/assets/card-front.png";
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [ferrofluidPaused, setFerrofluidPaused] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setFerrofluidPaused(!entry.isIntersecting);
+      },
+      { threshold: 0.1 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   const handleScroll = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -10,6 +29,7 @@ export function Hero() {
   return (
     <section
       id="hero"
+      ref={sectionRef}
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ backgroundColor: "#000000" }}
     >
@@ -26,6 +46,7 @@ export function Hero() {
           glow={2}
           flowDirection="down"
           opacity={0.85}
+          paused={ferrofluidPaused}
         />
       </div>
 
@@ -57,7 +78,7 @@ export function Hero() {
               </p>
 
               <h1
-                className="leading-none text-9xl max-sm:text-6xl max-lg:text-center tracking-tight"
+                className="leading-none text-9xl max-sm:text-6xl max-xl:text-8xl max-lg:text-center tracking-tight"
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   color: "#FFFFFF",
@@ -69,7 +90,7 @@ export function Hero() {
             </div>
 
             <p
-              className="max-sm:w-[90%] w-120 xl:w-160 xl:text-xl leading-relaxed max-sm:text-xs max-lg:text-lg max-sm:text-center max-sm:m-auto"
+              className="max-sm:w-[90%] w-145 xl:text-xl leading-relaxed max-sm:text-xs max-lg:text-lg max-lg:text-center max-sm:m-auto"
               style={{
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
                 color: "#545454",
@@ -81,7 +102,6 @@ export function Hero() {
               entregar soluções que geram impacto real e mensurável.
             </p>
 
-            {/* Botões CTA */}
             <div className="flex items-center gap-3 max-lg:justify-center flex-wrap">
               <button
                 onClick={() => handleScroll("#projects")}

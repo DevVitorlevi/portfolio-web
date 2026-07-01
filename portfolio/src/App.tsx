@@ -1,8 +1,16 @@
+import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "./components/sections/About";
+
 function App() {
   return (
-    <main>
-      <h1 style={{ color: "white" }}>Portfólio em construção</h1>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+      </main>
+    </>
   );
 }
 

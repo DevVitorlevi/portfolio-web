@@ -28,7 +28,7 @@ function useItemVisible() {
 
 function ItemCard({ item }: { item: ExperienceItem }) {
   return (
-    <div className="flex flex-col gap-3 bg-[#0c0c0c81] border border-[#141414] rounded-2xl transition-all px-5 py-6 hover:border-[#1F1F1F] hover:bg-[#1616168e]">
+    <div className="flex flex-col gap-3 bg-[#0f0f0f70] border border-[#1A1A1A] rounded-2xl transition-all px-5 py-6 hover:border-[#1F1F1F] hover:bg-[#1616168e]">
       <span
         style={{
           fontFamily: "'JetBrains Mono', monospace",

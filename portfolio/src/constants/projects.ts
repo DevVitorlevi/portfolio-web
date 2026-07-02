@@ -1,4 +1,8 @@
 import { Project } from "@/types";
+import FindaFriend from "@/assets/findafriend.png";
+import Peixe from "@/assets/peixe.png";
+import Touring from "@/assets/car.png";
+import Icapui from "@/assets/icapui.png";
 
 export const projects: Project[] = [
   {
@@ -7,19 +11,36 @@ export const projects: Project[] = [
     description:
       "Sistema intuitivo para cadastro, visualização e adoção de pets. Interface responsiva e acessível, com gerenciamento de adoções e agendamento de visitas.",
     stack: [
-      "TypeScript",
-      "Node.js",
-      "Fastify",
-      "Prisma",
-      "PostgreSQL",
-      "Vitest",
-      "Next.js",
-      "Tailwind",
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=ts",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=nextjs",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=tailwind",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=shadcnui",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=node",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=fastify",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=prisma",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=postgresql",
+      },
+      { icon: "https://skills.syvixor.com/api/icons?i=vitest" },
+      { icon: "https://skills.syvixor.com/api/icons?i=docker" },
     ],
     demoUrl: null,
-    githubUrl: null,
-    image: null,
-    year: 2024,
+    githubUrl: "https://github.com/DevVitorlevi/FindAFriend",
+    image: FindaFriend,
   },
   {
     id: 2,
@@ -27,67 +48,61 @@ export const projects: Project[] = [
     description:
       "Sistema inteligente de gerenciamento de estoque e vendas desenvolvido para peixarias. Compatível com celular e computador, com design responsivo e interface intuitiva.",
     stack: [
-      "JavaScript",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "React",
-      "Styled Components",
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=js",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=react",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=styledcomponents",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=node",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=express",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=mongodb",
+      },
     ],
-    demoUrl: null,
-    githubUrl: null,
-    image: null,
-    year: 2024,
+    demoUrl: "peixe-control.vercel.app",
+    githubUrl: "https://github.com/DevVitorlevi/PeixeControl",
+    image: Peixe,
   },
   {
     id: 3,
-    title: "AgendaEasy",
-    description:
-      "Sistema de gestão de reservas online para pequenos negócios. Permite que clientes visualizem horários disponíveis e façam reservas facilmente.",
-    stack: [
-      "JavaScript",
-      "Node.js",
-      "Express",
-      "Sequelize",
-      "Next.js",
-      "Tailwind",
-    ],
-    demoUrl: null,
-    githubUrl: null,
-    image: null,
-    year: 2024,
-  },
-  {
-    id: 4,
     title: "TouringCars",
     description:
       "Landing page moderna e sofisticada sobre o universo automotivo premium. Design minimalista e animações suaves que reforçam a sensação de exclusividade.",
-    stack: ["Next.js", "Tailwind", "TypeScript"],
-    demoUrl: null,
-    githubUrl: null,
-    image: null,
-    year: 2024,
+    stack: [
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=ts",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=nextjs",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=tailwind",
+      },
+    ],
+    demoUrl: "touring-cars-delta.vercel.app",
+    githubUrl: "https://github.com/DevVitorlevi/TouringCars",
+    image: Touring,
   },
   {
-    id: 5,
-    title: "Fome!!",
-    description:
-      "Landing page responsiva para restaurante, com design moderno, cores harmoniosas e animações fluidas que destacam menus, fotos e promoções.",
-    stack: ["HTML5", "CSS3", "JavaScript"],
-    demoUrl: null,
-    githubUrl: null,
-    image: null,
-    year: 2023,
-  },
-  {
-    id: 6,
+    id: 4,
     title: "Icapuí: Quando o Mar Avança",
     description:
       "Estudo sobre a erosão costeira no litoral de Icapuí, analisando suas causas naturais e antrópicas, incluindo urbanização, turismo e atividades econômicas.",
-    stack: ["HTML5", "CSS3", "JavaScript"],
-    demoUrl: null,
-    githubUrl: null,
-    image: null,
-    year: 2023,
+    stack: [
+      { icon: "https://skills.syvixor.com/api/icons?i=html" },
+      { icon: "https://skills.syvixor.com/api/icons?i=css3" },
+      { icon: "https://skills.syvixor.com/api/icons?i=js" },
+    ],
+    demoUrl: "icapui-e-a-erosao-costeira.vercel.app",
+    githubUrl: "https://github.com/DevVitorlevi/icapui-e-a-erosao-costeira",
+    image: Icapui,
   },
 ];

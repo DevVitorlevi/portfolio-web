@@ -54,7 +54,6 @@ function CategoryCard({
           className="flex flex-col gap-4 w-full h-full"
           style={{ padding: "1.5rem" }}
         >
-          {/* Header */}
           <div className="flex items-center justify-between border-b border-b-[#2c2b2b] pb-4">
             <div className="flex items-center gap-3">
               <div className="flex items-center justify-center w-9 h-9 bg-[#141414] border border-[#1F1F1F] rounded-lg text-[#565656]">
@@ -81,7 +80,6 @@ function CategoryCard({
             </span>
           </div>
 
-          {/* Techs com ícones */}
           {!isMethodologies && (
             <div className="flex flex-wrap gap-3">
               {category.techs.map((tech) => (
@@ -111,7 +109,6 @@ function CategoryCard({
             </div>
           )}
 
-          {/* Metodologias — badges */}
           {isMethodologies && category.methodologies && (
             <div className="flex flex-wrap gap-2">
               {category.methodologies.map((method) => (

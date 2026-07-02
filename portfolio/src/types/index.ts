@@ -2,6 +2,9 @@ export interface Skill {
   name: string;
   icon: string;
 }
+export interface Icons {
+  icon: string;
+}
 
 export interface SkillCategory {
   category: "frontend" | "backend" | "tools" | "methodologies";
@@ -14,11 +17,10 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  stack: string[];
+  stack: Icons[];
   demoUrl: string | null;
   githubUrl: string | null;
   image: string | null;
-  year: number;
 }
 
 export interface ExperienceItem {

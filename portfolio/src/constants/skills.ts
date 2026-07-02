@@ -22,6 +22,10 @@ export const skills: SkillCategory[] = [
         icon: "https://skills.syvixor.com/api/icons?i=tailwind",
       },
       {
+        name: "Styled",
+        icon: "https://skills.syvixor.com/api/icons?i=styledcomponents",
+      },
+      {
         name: "ShadCN/UI",
         icon: "https://skills.syvixor.com/api/icons?i=shadcnui",
       },

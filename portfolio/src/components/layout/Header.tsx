@@ -86,20 +86,6 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <button
-              className="cursor-pointer border border-white/10 rounded-xl transition-transform duration-200 hover:scale-105"
-              style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                color: "#9A9A9A",
-                backgroundColor: "#121212",
-                letterSpacing: "0.1em",
-                padding: "8px 14px",
-                fontSize: "13px",
-              }}
-              aria-label="Mudar idioma para inglês"
-            >
-              🌐 PT
-            </button>
             <a
               href="/curriculo.pdf"
               target="_blank"
@@ -211,21 +197,6 @@ export function Header() {
           className="flex flex-col gap-2 border-t border-[#201e1e]"
           style={{ padding: "1rem" }}
         >
-          <button
-            className={`mobile-bottom-btn${isOpen ? " animate" : ""} cursor-pointer border border-white/10 rounded-sm text-center transition-all hover:border-[#5f5c5c]`}
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              color: "#9A9A9A",
-              backgroundColor: "#121212",
-              fontSize: "11px",
-              letterSpacing: "0.1em",
-              padding: "8px 12px",
-              animationDelay: isOpen ? "420ms" : "0ms",
-            }}
-            aria-label="Mudar idioma"
-          >
-            🌐 Português
-          </button>
           <a
             href="/curriculo.pdf"
             target="_blank"

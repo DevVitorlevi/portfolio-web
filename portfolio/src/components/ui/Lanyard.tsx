@@ -25,6 +25,7 @@ import {
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
+import type { GLTF } from "three-stdlib";
 
 // replace with your own imports, see the usage snippet for details
 import cardGLB from "./card.glb";
@@ -50,6 +51,25 @@ const BLANK_PIXEL =
 // independently, aspect-preserving (no stretching).
 const FRONT_UV_RECT = { x: 0, y: 0, w: 0.5, h: 0.755 };
 const BACK_UV_RECT = { x: 0.5, y: 0, w: 0.5, h: 0.757 };
+
+// Shape of the GLTF asset produced by card.glb. Declared explicitly instead
+// of using `as any` so eslint's no-explicit-any rule is satisfied and we
+// still get autocomplete/type-checking on `nodes` / `materials`.
+type CardGLTFResult = GLTF & {
+  nodes: {
+    card: THREE.Mesh;
+    clip: THREE.Mesh;
+    clamp: THREE.Mesh;
+  };
+  materials: {
+    base: THREE.MeshPhysicalMaterial;
+    metal: THREE.MeshStandardMaterial;
+  };
+};
+
+// Anything drawImage()-able that also exposes width/height, which is all we
+// need in drawFitted below (HTMLImageElement, HTMLCanvasElement, ImageBitmap…).
+type DrawableImage = CanvasImageSource & { width: number; height: number };
 
 interface LanyardProps {
   position?: [number, number, number];
@@ -198,12 +218,23 @@ function Band({
     return body.lerped;
   };
 
-  const { nodes, materials } = useGLTF(cardGLB) as any;
+  const { nodes, materials } = useGLTF(cardGLB) as unknown as CardGLTFResult;
   const texture = useTexture(lanyardImage || lanyard);
   // useTexture must be called unconditionally; use a blank pixel when an image
   // isn't supplied for a given face, then skip compositing it below.
   const frontTex = useTexture(frontImage || BLANK_PIXEL);
   const backTex = useTexture(backImage || BLANK_PIXEL);
+
+  // The lanyard band texture should repeat rather than clamp. useTexture's
+  // return value must not be mutated directly (react-hooks/immutability
+  // flags this even inside an effect), so clone it and configure the clone
+  // instead — a texture we constructed ourselves is safe to mutate.
+  const bandTexture = useMemo(() => {
+    const t = texture.clone();
+    t.wrapS = t.wrapT = THREE.RepeatWrapping;
+    t.needsUpdate = true;
+    return t;
+  }, [texture]);
 
   // Composite the front/back images into the card's texture atlas (front = left
   // half, back = right half). Each image is drawn aspect-preserving (no stretch).
@@ -211,7 +242,7 @@ function Band({
     const baseMap = materials.base.map as THREE.Texture;
     if (!frontImage && !backImage) return baseMap;
 
-    const baseImg = baseMap.image as any;
+    const baseImg = baseMap.image as DrawableImage;
     const W = baseImg.width;
     const H = baseImg.height;
     const canvas = document.createElement("canvas");
@@ -222,7 +253,7 @@ function Band({
     // Keep the original baked atlas for the card edges and any untouched face.
     ctx.drawImage(baseImg, 0, 0, W, H);
 
-    const drawFitted = (img: any, rect: typeof FRONT_UV_RECT) => {
+    const drawFitted = (img: DrawableImage, rect: typeof FRONT_UV_RECT) => {
       const rx = rect.x * W;
       const ry = rect.y * H;
       const rw = rect.w * W;
@@ -241,8 +272,10 @@ function Band({
       ctx.restore();
     };
 
-    if (frontImage && frontTex.image) drawFitted(frontTex.image, FRONT_UV_RECT);
-    if (backImage && backTex.image) drawFitted(backTex.image, BACK_UV_RECT);
+    if (frontImage && frontTex.image)
+      drawFitted(frontTex.image as DrawableImage, FRONT_UV_RECT);
+    if (backImage && backTex.image)
+      drawFitted(backTex.image as DrawableImage, BACK_UV_RECT);
 
     const composite = new THREE.CanvasTexture(canvas);
     composite.colorSpace = THREE.SRGBColorSpace;
@@ -251,15 +284,20 @@ function Band({
     composite.needsUpdate = true;
     return composite;
   }, [frontImage, backImage, imageFit, frontTex, backTex, materials.base.map]);
-  const [curve] = useState(
-    () =>
-      new THREE.CatmullRomCurve3([
-        new THREE.Vector3(),
-        new THREE.Vector3(),
-        new THREE.Vector3(),
-        new THREE.Vector3(),
-      ]),
-  );
+
+  // curveType is set once, at construction time, inside the useState
+  // initializer — mutating the value returned by useState later (e.g. on
+  // every render) is what react-hooks/immutability flags.
+  const [curve] = useState(() => {
+    const c = new THREE.CatmullRomCurve3([
+      new THREE.Vector3(),
+      new THREE.Vector3(),
+      new THREE.Vector3(),
+      new THREE.Vector3(),
+    ]);
+    c.curveType = "chordal";
+    return c;
+  });
   const [dragged, drag] = useState<false | THREE.Vector3>(false);
   const [hovered, hover] = useState(false);
 
@@ -318,8 +356,10 @@ function Band({
     }
   });
 
-  curve.curveType = "chordal";
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  const lineResolution = useMemo(
+    () => new THREE.Vector2(...(isMobile ? [1000, 2000] : [1000, 1000])),
+    [isMobile],
+  );
 
   return (
     <>
@@ -394,13 +434,14 @@ function Band({
         </RigidBody>
       </group>
       <mesh ref={band}>
-        <meshLineGeometry />
+        <meshLineGeometry args={[]} />
         <meshLineMaterial
+          args={[{ resolution: lineResolution }]}
           color="white"
           depthTest={false}
-          resolution={isMobile ? [1000, 2000] : [1000, 1000]}
-          useMap
-          map={texture}
+          resolution={lineResolution}
+          useMap={1}
+          map={bandTexture}
           repeat={[-4, 1]}
           lineWidth={lanyardWidth}
         />

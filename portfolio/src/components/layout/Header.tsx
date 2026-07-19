@@ -1,6 +1,6 @@
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { useMobileMenu } from "@/hooks/useMobileMenu";
-import { Menu, X } from "lucide-react";
+import { FileUser, Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "ABOUT", href: "#about" },
@@ -90,18 +90,15 @@ export function Header() {
               href="/curriculo.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer border border-white/10 rounded-xl transition-transform duration-200 hover:scale-105"
+              className="cursor-pointer border border-white/10 rounded-xl bg-[#121212] text-[#9a9a9a] py-2 p-4 transition-transform duration-200 hover:scale-105 flex items-center justify-center gap-2"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
-                color: "#9A9A9A",
-                backgroundColor: "#121212",
                 letterSpacing: "0.1em",
-                padding: "8px 14px",
-                fontSize: "13px",
               }}
               aria-label="Abrir currículo em nova aba"
             >
-              ↓ CURRÍCULO
+              <FileUser size={18} />{" "}
+              <span className="text-[13px]">CURRICULO</span>
             </a>
           </div>
 
@@ -201,19 +198,15 @@ export function Header() {
             href="/curriculo.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={`mobile-bottom-btn${isOpen ? " animate" : ""} border border-white/10 rounded-sm text-center transition-all hover:border-[#5f5c5c]`}
+            className="cursor-pointer border border-white/10 rounded-sm bg-[#121212] text-[#9a9a9a] py-2 p-4 transition-transform duration-200 hover:scale-105 flex items-center justify-center gap-2"
             style={{
               fontFamily: "'JetBrains Mono', monospace",
-              color: "#9A9A9A",
-              backgroundColor: "#121212",
-              fontSize: "11px",
               letterSpacing: "0.1em",
-              padding: "8px 12px",
-              animationDelay: isOpen ? "500ms" : "0ms",
             }}
-            aria-label="Baixar currículo"
+            aria-label="Abrir currículo em nova aba"
           >
-            ↓ BAIXAR CV
+            <FileUser size={18} />{" "}
+            <span className="text-[13px]">CURRICULO</span>
           </a>
         </div>
       </div>

@@ -38,7 +38,7 @@ export const projects: Project[] = [
       { icon: "https://skills.syvixor.com/api/icons?i=vitest" },
       { icon: "https://skills.syvixor.com/api/icons?i=docker" },
     ],
-    demoUrl: null,
+    demoUrl: "https://find-a-friend-five.vercel.app",
     githubUrl: "https://github.com/DevVitorlevi/FindAFriend",
     image: FindaFriend,
   },

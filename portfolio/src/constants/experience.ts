@@ -3,6 +3,15 @@ import { ExperienceItem } from "@/types";
 export const experiences: ExperienceItem[] = [
   {
     id: 1,
+    type: "education",
+    title: "Bacharelado em Engenharia de Software",
+    institution: "Universiadade Federal do Ceara",
+    period: "Ago 2026 - Presente",
+    bullets: [],
+    stack: [],
+  },
+  {
+    id: 2,
     type: "work",
     title: "Desenvolvedor Full Stack — Freelance",
     institution: "Autônomo",
@@ -25,7 +34,7 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     type: "work",
     title: "Estagiário de Desenvolvimento Full Stack",
     institution: "Golden Cloud Technology",
@@ -49,7 +58,7 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     type: "education",
     title: "Técnico em Desenvolvimento de Sistemas",
     institution: "EEEP Jaime da Cunha Rebouças",

@@ -120,7 +120,7 @@ export function About() {
               {infoItems.map((item, index) => (
                 <div
                   key={item.label}
-                  className="flex items-center justify-between px-7 py-5 transition-all hover:bg-[#2b2a2a70]"
+                  className="flex items-center justify-between px-7 py-5 gap-2 transition-all hover:bg-[#2b2a2a70]"
                   style={{
                     borderBottom:
                       index < infoItems.length - 1
@@ -152,19 +152,7 @@ export function About() {
               href="/curriculo.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 transition-all duration-200 group rounded-2xl bg-[#111] border border-[#292929] hover:border-[#5a5959] ,px-6 py-5 text-[#9A9A9A]"
-              style={{
-                letterSpacing: "0.1em",
-                textDecoration: "none",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#181818";
-                e.currentTarget.style.color = "#FFFFFF";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#111111";
-                e.currentTarget.style.color = "#9A9A9A";
-              }}
+              className="flex items-center justify-center gap-2 rounded-2xl border border-[#292929] bg-[#111111]px-6 py-5 tracking-[0.1em] text-[#9A9A9A] no-underline transition-all duration-200 hover:border-[#5A5959] hover:bg-[#181818] hover:text-white"
             >
               <span>Download CV</span>
             </a>

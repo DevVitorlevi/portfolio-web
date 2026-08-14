@@ -1,5 +1,4 @@
 import { Project } from "@/types";
-import FindaFriend from "@/assets/findafriend.png";
 import Peixe from "@/assets/peixe.png";
 import Touring from "@/assets/car.png";
 import Icapui from "@/assets/icapui.png";
@@ -7,44 +6,6 @@ import Icapui from "@/assets/icapui.png";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "FindAFriend",
-    description:
-      "Sistema intuitivo para cadastro, visualização e adoção de pets. Interface responsiva e acessível, com gerenciamento de adoções e agendamento de visitas.",
-    stack: [
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=ts",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=nextjs",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=tailwind",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=shadcnui",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=node",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=fastify",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=prisma",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=postgresql",
-      },
-      { icon: "https://skills.syvixor.com/api/icons?i=vitest" },
-      { icon: "https://skills.syvixor.com/api/icons?i=docker" },
-      { icon: "https://skills.syvixor.com/api/icons?i=swagger" },
-    ],
-    demoUrl: "https://find-a-friend-five.vercel.app",
-    githubUrl: "https://github.com/DevVitorlevi/FindAFriend",
-    image: FindaFriend,
-  },
-  {
-    id: 2,
     title: "PeixeControl",
     description:
       "Sistema inteligente de gerenciamento de estoque e vendas desenvolvido para peixarias. Compatível com celular e computador, com design responsivo e interface intuitiva.",
@@ -74,7 +35,7 @@ export const projects: Project[] = [
     image: Peixe,
   },
   {
-    id: 3,
+    id: 2,
     title: "TouringCars",
     description:
       "Landing page moderna e sofisticada sobre o universo automotivo premium. Design minimalista e animações suaves que reforçam a sensação de exclusividade.",
@@ -94,7 +55,7 @@ export const projects: Project[] = [
     image: Touring,
   },
   {
-    id: 4,
+    id: 3,
     title: "Icapuí: Quando o Mar Avança",
     description:
       "Estudo sobre a erosão costeira no litoral de Icapuí, analisando suas causas naturais e antrópicas, incluindo urbanização, turismo e atividades econômicas.",

@@ -13,7 +13,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: 2,
     type: "work",
-    title: "Desenvolvedor Full Stack — Freelance",
+    title: "Desenvolvedor Full Stack — Freelancer",
     institution: "Autônomo",
     period: "Set 2024 – Presente",
     bullets: [

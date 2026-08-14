@@ -64,6 +64,10 @@ export const skills: SkillCategory[] = [
       { name: "JWT", icon: "https://skills.syvixor.com/api/icons?i=jwt" },
       { name: "Vitest", icon: "https://skills.syvixor.com/api/icons?i=vitest" },
       { name: "Docker", icon: "https://skills.syvixor.com/api/icons?i=docker" },
+      {
+        name: "Swagger",
+        icon: "https://skills.syvixor.com/api/icons?i=swagger",
+      },
     ],
   },
   {
@@ -73,10 +77,6 @@ export const skills: SkillCategory[] = [
       {
         name: "VS Code",
         icon: "https://skills.syvixor.com/api/icons?i=vscode",
-      },
-      {
-        name: "Npm",
-        icon: "https://skills.syvixor.com/api/icons?i=npm",
       },
       {
         name: "Github",

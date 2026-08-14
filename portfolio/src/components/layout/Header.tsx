@@ -3,11 +3,11 @@ import { useMobileMenu } from "@/hooks/useMobileMenu";
 import { FileUser, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "ABOUT", href: "#about" },
+  { label: "SOBRE", href: "#about" },
   { label: "SKILLS", href: "#skills" },
-  { label: "EXPERIENCE", href: "#experience" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "EXPERIENCIA", href: "#experience" },
+  { label: "PROJETOS", href: "#projects" },
+  { label: "CONTATO", href: "#contact" },
 ];
 
 const mobileNavLinks = [
@@ -88,14 +88,13 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="/curriculo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer border border-white/10 rounded-xl bg-[#121212] text-[#9a9a9a] py-2 p-4 transition-transform duration-200 hover:scale-105 flex items-center justify-center gap-2"
+              download="curriculo-vitor.pdf"
+              className="cursor-pointer border border-white/10 rounded-sm bg-[#121212] text-[#9a9a9a] py-2 p-4 transition-transform duration-200 hover:scale-105 flex items-center justify-center gap-2"
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 letterSpacing: "0.1em",
               }}
-              aria-label="Abrir currículo em nova aba"
+              aria-label="Baixar currículo"
             >
               <FileUser size={18} />{" "}
               <span className="text-[13px]">CURRICULO</span>
@@ -196,14 +195,13 @@ export function Header() {
         >
           <a
             href="/curriculo.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download="curriculo-vitor.pdf"
             className="cursor-pointer border border-white/10 rounded-sm bg-[#121212] text-[#9a9a9a] py-2 p-4 transition-transform duration-200 hover:scale-105 flex items-center justify-center gap-2"
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               letterSpacing: "0.1em",
             }}
-            aria-label="Abrir currículo em nova aba"
+            aria-label="Baixar currículo"
           >
             <FileUser size={18} />{" "}
             <span className="text-[13px]">CURRICULO</span>

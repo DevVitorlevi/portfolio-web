@@ -150,9 +150,8 @@ export function About() {
             </div>
             <a
               href="/curriculo.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-2xl border border-[#292929] bg-[#111111]px-6 py-5 tracking-[0.1em] text-[#9A9A9A] no-underline transition-all duration-200 hover:border-[#5A5959] hover:bg-[#181818] hover:text-white"
+              download="curriculo-vitor.pdf"
+              className="flex items-center justify-center gap-2 rounded-2xl border border-[#292929] bg-[#111111] px-6 py-5 tracking-[0.1em] text-[#9A9A9A] no-underline transition-all duration-200 hover:border-[#5A5959] hover:bg-[#181818] hover:text-white"
             >
               <span>Download CV</span>
             </a>

@@ -1,7 +1,7 @@
 import { Project } from "@/types";
-import Peixe from "@/assets/projects/peixe.png";
-import Icapui from "@/assets/projects/icapui.png";
-import Pet from "@/assets/projects/pet.png";
+import Peixe from "@/assets/peixe.png";
+import Icapui from "@/assets/icapui.png";
+import Pet from "@/assets/pet.png";
 
 export const projects: Project[] = [
   {

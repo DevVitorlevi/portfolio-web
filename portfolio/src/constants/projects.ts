@@ -1,14 +1,50 @@
 import { Project } from "@/types";
-import Peixe from "@/assets/peixe.png";
-import Touring from "@/assets/car.png";
-import Icapui from "@/assets/icapui.png";
+import Peixe from "@/assets/projects/peixe.png";
+import Icapui from "@/assets/projects/icapui.png";
+import Pet from "@/assets/projects/pet.png";
 
 export const projects: Project[] = [
   {
     id: 1,
+    title: "FindAFriend",
+    description:
+      "FindAFriend conecta ORGs de proteção animal a adotantes: ORGs cadastram pets disponíveis, adotantes buscam por cidade e filtram por idade/porte, e o contato final para adoção é feito diretamente via WhatsApp com a ORG, sem intermediação da plataforma.",
+    stack: [
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=ts",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=nextjs",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=tailwind",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=shadcnui",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=node",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=fastify",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=prisma",
+      },
+      {
+        icon: "https://skills.syvixor.com/api/icons?i=postgresql",
+      },
+      { icon: "https://skills.syvixor.com/api/icons?i=swagger" },
+    ],
+    demoUrl: "https://find-a-friend-five.vercel.app",
+    githubUrl: "https://github.com/DevVitorlevi/FindAFriend/",
+    image: Pet,
+  },
+  {
+    id: 2,
     title: "PeixeControl",
     description:
-      "Sistema inteligente de gerenciamento de estoque e vendas desenvolvido para peixarias. Compatível com celular e computador, com design responsivo e interface intuitiva.",
+      "PeixeControl é um sistema de gestão de estoque e vendas voltado para peixarias, com controle de produtos, vendas via carrinho, movimentações de estoque e relatórios diário/mensal exportáveis em PDF.",
     stack: [
       {
         icon: "https://skills.syvixor.com/api/icons?i=js",
@@ -35,30 +71,10 @@ export const projects: Project[] = [
     image: Peixe,
   },
   {
-    id: 2,
-    title: "TouringCars",
-    description:
-      "Landing page moderna e sofisticada sobre o universo automotivo premium. Design minimalista e animações suaves que reforçam a sensação de exclusividade.",
-    stack: [
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=ts",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=nextjs",
-      },
-      {
-        icon: "https://skills.syvixor.com/api/icons?i=tailwind",
-      },
-    ],
-    demoUrl: "https://touring-cars-delta.vercel.app",
-    githubUrl: "https://github.com/DevVitorlevi/TouringCars",
-    image: Touring,
-  },
-  {
-    id: 3,
+    id: 4,
     title: "Icapuí: Quando o Mar Avança",
     description:
-      "Estudo sobre a erosão costeira no litoral de Icapuí, analisando suas causas naturais e antrópicas, incluindo urbanização, turismo e atividades econômicas.",
+      "Site educacional sobre a erosão costeira em Icapuí (CE), abordando a dinâmica do litoral (dunas, falésias, terraços marinhos e delta de maré), a linha do tempo da erosão e as medidas de contenção adotadas pelo município.",
     stack: [
       { icon: "https://skills.syvixor.com/api/icons?i=html" },
       { icon: "https://skills.syvixor.com/api/icons?i=css3" },

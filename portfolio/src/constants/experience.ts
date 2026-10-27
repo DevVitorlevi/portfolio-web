@@ -5,7 +5,7 @@ export const experiences: ExperienceItem[] = [
     id: 1,
     type: "education",
     title: "Bacharelado em Engenharia de Software",
-    institution: "Universiadade Federal do Ceara",
+    institution: "Universidade Federal do Ceará",
     period: "Ago 2026 - Presente",
     bullets: [],
     stack: [],
@@ -17,9 +17,9 @@ export const experiences: ExperienceItem[] = [
     institution: "Autônomo",
     period: "Set 2024 – Presente",
     bullets: [
-      "Transformei operações 100% manuais em sistemas inteligentes para clientes de diferentes segmentos, automatizando rotinas de estoque e agendamento e reduzindo em até 50% o tempo operacional das equipes.",
-      "Projetei APIs RESTful escaláveis com autenticação JWT, RBAC e validação via Zod, garantindo segurança e manutenibilidade em projetos de médio e longo prazo sem comprometer a performance.",
-      "Gerenciei o ciclo completo de cada projeto, requisitos, arquitetura, desenvolvimento, testes e deploy, aplicando Clean Code, Clean Architecture, DDD e SOLID para garantir que cada entrega fosse sustentável e de fácil evolução.",
+      "Reduzi de horas para minutos o tempo operacional de peixarias, oficinas e lojas de roupas, ao trocar o controle em papel por sistemas web de estoque e vendas.",
+      "Eliminei a troca manual de mensagens por WhatsApp em barbearias, com cerca de 30 agendamentos por semana, ao criar um sistema próprio de agendamento online.",
+      "Entreguei 5 projetos de ponta a ponta, todos ativos em produção, ao conduzir o levantamento de requisitos, estruturar as APIs com Clean Architecture e DDD, proteger com JWT, RBAC e validação em Zod, testar com Vitest, documentar em Swagger e fazer o deploy com Docker.",
     ],
     stack: [
       "TypeScript",
@@ -40,10 +40,9 @@ export const experiences: ExperienceItem[] = [
     institution: "Golden Cloud Technology",
     period: "Ago 2025 - Dez 2025",
     bullets: [
-      "Desenvolvi um painel administrativo em Next.js, TailwindCSS e ShadCN/UI com autenticação, dashboards e formulários com validação via Zod, reduzindo em até 30% o tempo da diretoria em auditorias internas",
-      " Identifiquei e corrigi uma vulnerabilidade crítica no fluxo de reset de senha, onde o token era retornado diretamente pela API, reestruturando o processo para envio exclusivo via SMTP e eliminando um risco real de exposição de dados dos usuários.",
-      "Implementei filtros avançados de busca no backend com Node.js, Prisma ORM e PostgreSQL, suportando múltiplas combinações de parâmetros e reduzindo o tempo de consulta de minutos para segundos.",
-      "Automatizei testes E2E em sistemas governamentais com Cypress e Gherkin (BDD), cobrindo fluxos críticos de cadastro e edição de dados e garantindo estabilidade das entregas em produção.",
+      "Entreguei 9 funcionalidades de um painel administrativo (autenticação, dashboard dinâmico, gestão de usuários, filtros avançados e cadastros com validação em Zod), ao desenvolver em Next.js, Tailwind CSS e ShadCN/UI e alinhar prioridades com o time em dailies.",
+      "Eliminei um risco real de exposição de dados dos usuários ao corrigir em cerca de 2 dias uma vulnerabilidade crítica no reset de senha, em que a API retornava o token diretamente, passando o envio exclusivamente para SMTP, com ajustes no front-end.",
+      "Garanti a estabilidade das entregas em produção ao automatizar 46 cenários de teste E2E com Cypress e Gherkin (BDD) em sistemas governamentais, cobrindo os fluxos críticos de cadastro e edição de dados.",
     ],
     stack: [
       "TypeScript",
@@ -62,7 +61,7 @@ export const experiences: ExperienceItem[] = [
     type: "education",
     title: "Técnico em Desenvolvimento de Sistemas",
     institution: "EEEP Jaime da Cunha Rebouças",
-    period: "Fev 2022 – Dez 2025",
+    period: "Fev 2023 – Dez 2025",
     bullets: [
       "Formação técnica integrada ao ensino médio com foco em desenvolvimento de software.",
       "Participei de competições de empreendedorismo desenvolvendo e gerenciando sistemas em equipe, com exposição a MVP, validação de ideias e gestão de projetos.",
